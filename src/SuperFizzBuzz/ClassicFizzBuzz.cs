@@ -2,7 +2,7 @@
 
 namespace Headspring.FizzBuzz
 {
-    public class SuperFizzBuzz : BaseFizzBuzz
+    public class ClassicFizzBuzz : BaseFizzBuzz
     {
     }
 }
