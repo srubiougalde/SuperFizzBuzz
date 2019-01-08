@@ -1,4 +1,5 @@
 ﻿using System;
+using SuperFizzBuzz;
 
 namespace ConsoleApp
 {
