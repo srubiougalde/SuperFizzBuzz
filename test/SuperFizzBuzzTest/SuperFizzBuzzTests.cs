@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using SuperFizzBuzz;
+using Headspring.FizzBuzz;
 
-namespace Tests
+namespace Headspring.FizzBuzzTests
 {
     public class SuperFizzBuzzTests
     {
