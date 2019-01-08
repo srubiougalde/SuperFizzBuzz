@@ -1,8 +1,9 @@
 using NUnit.Framework;
+using SuperFizzBuzz;
 
 namespace Tests
 {
-    public class Tests
+    public class SuperFizzBuzzTests
     {
         [SetUp]
         public void Setup()
