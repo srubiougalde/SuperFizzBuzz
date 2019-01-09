@@ -1,5 +1,5 @@
 ﻿using System;
-using SuperFizzBuzz;
+using Headspring.FizzBuzz;
 
 namespace ConsoleApp
 {
@@ -7,7 +7,10 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var fizzbuzz = new ClassicFizzBuzz();
+            var result = fizzbuzz.Evaluate(2, 35);   
+
+            result.ForEach(i => Console.WriteLine(i));         
         }
     }
 }
