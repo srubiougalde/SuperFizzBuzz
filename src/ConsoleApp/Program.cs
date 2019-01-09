@@ -8,9 +8,11 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             var fizzbuzz = new ClassicFizzBuzz();
-            var result = fizzbuzz.Evaluate(2, 35);   
+            var result = fizzbuzz.Evaluate(2, 35); 
+            // var result = fizzbuzz.Evaluate(-35, -2); 
+            // var result = fizzbuzz.Evaluate(1, 1000000000);
 
-            result.ForEach(i => Console.WriteLine(i));         
+            Console.WriteLine("{0}", result);
         }
     }
 }

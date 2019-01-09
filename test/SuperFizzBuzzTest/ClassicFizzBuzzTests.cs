@@ -26,9 +26,7 @@ namespace Headspring.FizzBuzzTests
         public void Should_Evaluate_Classic_FizzBuzz(int a, int b, string r)
         {
             var result = FizzBuzz.Evaluate(a, b);
-            var stringResult = string.Join(",", result.ToArray());
-
-            Assert.That(r, Is.EqualTo(stringResult));
+            Assert.That(r, Is.EqualTo(result.ToString()));
         }
     }
 }
