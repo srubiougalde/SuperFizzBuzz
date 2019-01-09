@@ -5,12 +5,12 @@ namespace Headspring.FizzBuzz
 {
     public abstract class BaseFizzBuzz
     {  
-        protected List<KeyValuePair<int, string>> _Tokens;
+        protected List<KeyValuePair<int, string>> Tokens;
 
         protected BaseFizzBuzz() {
-            _Tokens = new List<KeyValuePair<int, string>>();
-            _Tokens.Add(new KeyValuePair<int, string>(3, "Fizz"));
-            _Tokens.Add(new KeyValuePair<int, string>(5, "Buzz"));
+            Tokens = new List<KeyValuePair<int, string>>();
+            Tokens.Add(new KeyValuePair<int, string>(3, "Fizz"));
+            Tokens.Add(new KeyValuePair<int, string>(5, "Buzz"));
         }
 
         public virtual FizzBuzzResult Evaluate(int start, int end) {
@@ -22,7 +22,7 @@ namespace Headspring.FizzBuzz
             var size = end - start + 1;
             var result = new FizzBuzzResult(start, end);
 
-            foreach(var token in _Tokens) {
+            foreach(var token in Tokens) {
                 var factor = token.Key;
                 var word = token.Value;
 
