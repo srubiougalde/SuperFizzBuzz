@@ -12,15 +12,16 @@ namespace ConsoleApp
             SuperFizzBuzz();
 
             Console.WriteLine("Press any key to exit.");
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         static void ClassicFizzBuzz()
         {
-            var fizzbuzz = new ClassicFizzBuzz();
+            var factory = new ClassicFizzBuzzFactory();
+            var fizzbuzz = factory.GetFizzBuzz();
             var result = fizzbuzz.Evaluate(1, 100); 
 
-            Console.WriteLine("{0}", result);
+            Console.WriteLine("{0}\n", result);
         }
 
         static void SuperFizzBuzz()
@@ -30,10 +31,11 @@ namespace ConsoleApp
             tokens.Add(new KeyValuePair<int, string>(7, "Buzz"));
             tokens.Add(new KeyValuePair<int, string>(38, "Bazz"));
 
-            var fizzbuzz = new SuperFizzBuzz(tokens);
+            var factory = new SuperFizzBuzzFactory(tokens);
+            var fizzbuzz = factory.GetFizzBuzz();
             var result = fizzbuzz.Evaluate(-12, 145); 
 
-            Console.WriteLine("{0}", result);
+            Console.WriteLine("{0}\n", result);
         }
     }
 }
