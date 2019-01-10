@@ -7,10 +7,7 @@ namespace Headspring.FizzBuzz
     public int Start { get; set; }
     public int End { get; set; }
     public string[] Items { get; set; }
-
-    public FizzBuzzResult() {
-    }
-
+    
     public FizzBuzzResult(int start, int end) {
       var size = end - start + 1;
       Items = new string[size];

@@ -3,17 +3,19 @@ using System.Collections.Generic;
 
 namespace Headspring.FizzBuzz
 {
-    public abstract class BaseFizzBuzz
+    public abstract class FizzBuzz
     {  
-        protected List<KeyValuePair<int, string>> Tokens;
+        public abstract string FizzBuzzType { get; }
 
-        protected BaseFizzBuzz() {
+        protected List<KeyValuePair<int, string>> Tokens  { get; set; } 
+
+        protected FizzBuzz() {
             Tokens = new List<KeyValuePair<int, string>>();
             Tokens.Add(new KeyValuePair<int, string>(3, "Fizz"));
             Tokens.Add(new KeyValuePair<int, string>(5, "Buzz"));
         }
 
-        public virtual FizzBuzzResult Evaluate(int start, int end) {
+        public FizzBuzzResult Evaluate(int start, int end) {
             if (start > end) {
                 throw new ArgumentException();
             }
