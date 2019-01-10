@@ -4,6 +4,7 @@ using Headspring.FizzBuzz;
 
 namespace Headspring.FizzBuzzTests
 {
+    [TestFixture]
     public class SuperFizzBuzzTests
     {
         [TestCase(10, 1, "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz")]
