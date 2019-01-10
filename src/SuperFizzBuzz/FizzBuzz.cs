@@ -28,13 +28,31 @@ namespace Headspring.FizzBuzz
                 var factor = token.Key;
                 var word = token.Value;
 
-                var first = (start % factor) == 0 ? start : (start + factor - (start % factor));
-                for (var i = first; i <= end; i += factor) {                    
+                var next = GetNextCommonMultiple(start, factor);
+                for (var i = next; i <= end; i += factor) {                    
                     result.Items[i - start] += token.Value;
                 }
             }
 
             return result;
+        }
+
+        protected int GetNextCommonMultiple(int number, int factor) {
+            var mod = number % factor;
+
+            if (mod == 0)
+            {
+                return number;
+            }
+
+            if (number >= 0)
+            {
+                return number + factor - mod;
+            }
+            else
+            {
+                return number - mod;
+            }
         }
     }
 }
