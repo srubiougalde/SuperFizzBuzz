@@ -7,20 +7,20 @@ namespace Headspring.FizzBuzzTests
   [TestFixture]
   public class FizzBuzzFactoryTests
   {
-    [Test]
-    public void Should_Return_ClassicFizzBuzz_Instance()
+    [TestCase(1,10)]
+    public void Should_Return_ClassicFizzBuzz_Instance(int a, int b)
     {
       FizzBuzzFactory factory = null;
-      factory = new ClassicFizzBuzzFactory();
+      factory = new ClassicFizzBuzzFactory(a, b);
       var fizzbuzz = factory.GetFizzBuzz();  
       Assert.That("Classic", Is.EqualTo(fizzbuzz.FizzBuzzType));
     }
 
-    [Test]
-    public void Should_Return_SuperFizzBuzz_Instance()
+    [TestCase(1,10)]
+    public void Should_Return_SuperFizzBuzz_Instance(int a, int b)
     {
       FizzBuzzFactory factory = null;
-      factory = new SuperFizzBuzzFactory();
+      factory = new SuperFizzBuzzFactory(a, b);
       var fizzbuzz = factory.GetFizzBuzz();  
       Assert.That("Super", Is.EqualTo(fizzbuzz.FizzBuzzType));
     }

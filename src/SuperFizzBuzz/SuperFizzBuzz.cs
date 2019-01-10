@@ -7,13 +7,14 @@ namespace Headspring.FizzBuzz
     {
         private readonly string _fizzBuzzType;
 
-        public SuperFizzBuzz() 
-            : base()
+        public SuperFizzBuzz(int start, int end) 
+            : base(start, end)
         {
             _fizzBuzzType = "Super";
         }
 
-        public SuperFizzBuzz(List<KeyValuePair<int, string>> tokens)
+        public SuperFizzBuzz(int start, int end, List<KeyValuePair<int, string>> tokens)
+            : base(start, end)
         {
             _fizzBuzzType = "Super";
             Tokens = tokens;

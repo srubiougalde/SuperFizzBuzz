@@ -9,24 +9,24 @@ namespace Headspring.FizzBuzzTests
     {
         [TestCase(10, 1, "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz")]
         public void Should_Evaluate_Input_Not_In_Incremental_Sequence(int a, int b, string r) {
-            var FizzBuzz = new SuperFizzBuzz();
-            var result = FizzBuzz.Evaluate(a, b);
+            var FizzBuzz = new SuperFizzBuzz(a, b);
+            var result = FizzBuzz.Evaluate();
             Assert.That(r, Is.EqualTo(result.ToString()));
         }
 
         [TestCase(1, 10, "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz")]
         public void Should_Evaluate_Classic_FizzBuzz_With_Default_Constructor(int a, int b, string r)
         {
-            var FizzBuzz = new SuperFizzBuzz();
-            var result = FizzBuzz.Evaluate(a, b);
+            var FizzBuzz = new SuperFizzBuzz(a, b);
+            var result = FizzBuzz.Evaluate();
             Assert.That(r, Is.EqualTo(result.ToString()));
         }
 
         [TestCase(-10, 0, "Buzz,Fizz,-8,-7,Fizz,Buzz,-4,Fizz,-2,-1,FizzBuzz")]
         public void Should_Evaluate_Negative_Numbers(int a, int b, string r)
         {
-            var FizzBuzz = new SuperFizzBuzz();
-            var result = FizzBuzz.Evaluate(a, b);
+            var FizzBuzz = new SuperFizzBuzz(a, b);
+            var result = FizzBuzz.Evaluate();
             Assert.That(r, Is.EqualTo(result.ToString()));
         }
 
@@ -40,8 +40,8 @@ namespace Headspring.FizzBuzzTests
             tokens.Add(new KeyValuePair<int, string>(7, "Buzz"));
             tokens.Add(new KeyValuePair<int, string>(38, "Bazz"));
 
-            var FizzBuzz = new SuperFizzBuzz(tokens);
-            var result = FizzBuzz.Evaluate(a, b);
+            var FizzBuzz = new SuperFizzBuzz(a, b, tokens);
+            var result = FizzBuzz.Evaluate();
             Assert.That(r, Is.EqualTo(result.ToString()));
         }
     }

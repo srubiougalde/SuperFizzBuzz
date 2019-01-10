@@ -17,9 +17,9 @@ namespace ConsoleApp
 
         static void ClassicFizzBuzz()
         {
-            var factory = new ClassicFizzBuzzFactory();
+            var factory = new ClassicFizzBuzzFactory(1, 100);
             var fizzbuzz = factory.GetFizzBuzz();
-            var result = fizzbuzz.Evaluate(1, 100); 
+            var result = fizzbuzz.Evaluate(); 
 
             Console.WriteLine("{0}\n", result);
         }
@@ -31,9 +31,9 @@ namespace ConsoleApp
             tokens.Add(new KeyValuePair<int, string>(7, "Buzz"));
             tokens.Add(new KeyValuePair<int, string>(38, "Bazz"));
 
-            var factory = new SuperFizzBuzzFactory(tokens);
+            var factory = new SuperFizzBuzzFactory(-12, 145, tokens);
             var fizzbuzz = factory.GetFizzBuzz();
-            var result = fizzbuzz.Evaluate(-12, 145); 
+            var result = fizzbuzz.Evaluate(); 
 
             Console.WriteLine("{0}\n", result);
         }

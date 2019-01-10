@@ -6,8 +6,8 @@ namespace Headspring.FizzBuzz
     {
         private readonly string _fizzBuzzType;
 
-        public ClassicFizzBuzz() 
-            : base() 
+        public ClassicFizzBuzz(int start, int end) 
+            : base(start, end)
         {
             _fizzBuzzType = "Classic";
         }
